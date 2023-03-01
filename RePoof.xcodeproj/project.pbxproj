@@ -8,29 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		51AC068F29AFB84E00F1D838 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC068E29AFB84E00F1D838 /* AppDelegate.swift */; };
-		51AC069129AFB84E00F1D838 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC069029AFB84E00F1D838 /* ViewController.swift */; };
 		51AC069329AFB84F00F1D838 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51AC069229AFB84F00F1D838 /* Assets.xcassets */; };
 		51AC069629AFB84F00F1D838 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AC069429AFB84F00F1D838 /* Main.storyboard */; };
 		51AC069F29AFB86700F1D838 /* EventTapper in Frameworks */ = {isa = PBXBuildFile; productRef = 51AC069E29AFB86700F1D838 /* EventTapper */; };
-		51AC06A129AFB8A600F1D838 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC06A029AFB8A600F1D838 /* WindowController.swift */; };
-		51AC06A329AFB8AD00F1D838 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC06A229AFB8AD00F1D838 /* Window.swift */; };
 		51AC06A529AFBA4A00F1D838 /* AccessibilityAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC06A429AFBA4900F1D838 /* AccessibilityAuthorization.swift */; };
 		51AC06A729AFC2FD00F1D838 /* DockInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC06A629AFC2FD00F1D838 /* DockInjection.swift */; };
-		51AC06A929AFDC0300F1D838 /* DockTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC06A829AFDC0300F1D838 /* DockTile.swift */; };
+		51AC06A929AFDC0300F1D838 /* DockPref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC06A829AFDC0300F1D838 /* DockPref.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		51AC068B29AFB84E00F1D838 /* RePoof.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RePoof.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51AC068E29AFB84E00F1D838 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		51AC069029AFB84E00F1D838 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		51AC069229AFB84F00F1D838 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51AC069529AFB84F00F1D838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51AC069729AFB84F00F1D838 /* RePoof.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RePoof.entitlements; sourceTree = "<group>"; };
-		51AC06A029AFB8A600F1D838 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
-		51AC06A229AFB8AD00F1D838 /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		51AC06A429AFBA4900F1D838 /* AccessibilityAuthorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityAuthorization.swift; sourceTree = "<group>"; };
 		51AC06A629AFC2FD00F1D838 /* DockInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockInjection.swift; sourceTree = "<group>"; };
-		51AC06A829AFDC0300F1D838 /* DockTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockTile.swift; sourceTree = "<group>"; };
+		51AC06A829AFDC0300F1D838 /* DockPref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockPref.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +60,9 @@
 			children = (
 				51AC068E29AFB84E00F1D838 /* AppDelegate.swift */,
 				51AC06A629AFC2FD00F1D838 /* DockInjection.swift */,
-				51AC06A829AFDC0300F1D838 /* DockTile.swift */,
+				51AC06A829AFDC0300F1D838 /* DockPref.swift */,
 				51AC06A429AFBA4900F1D838 /* AccessibilityAuthorization.swift */,
 				51AC069429AFB84F00F1D838 /* Main.storyboard */,
-				51AC06A029AFB8A600F1D838 /* WindowController.swift */,
-				51AC06A229AFB8AD00F1D838 /* Window.swift */,
-				51AC069029AFB84E00F1D838 /* ViewController.swift */,
 				51AC069229AFB84F00F1D838 /* Assets.xcassets */,
 				51AC069729AFB84F00F1D838 /* RePoof.entitlements */,
 			);
@@ -154,12 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51AC069129AFB84E00F1D838 /* ViewController.swift in Sources */,
-				51AC06A129AFB8A600F1D838 /* WindowController.swift in Sources */,
 				51AC06A729AFC2FD00F1D838 /* DockInjection.swift in Sources */,
-				51AC06A929AFDC0300F1D838 /* DockTile.swift in Sources */,
+				51AC06A929AFDC0300F1D838 /* DockPref.swift in Sources */,
 				51AC068F29AFB84E00F1D838 /* AppDelegate.swift in Sources */,
-				51AC06A329AFB8AD00F1D838 /* Window.swift in Sources */,
 				51AC06A529AFBA4A00F1D838 /* AccessibilityAuthorization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

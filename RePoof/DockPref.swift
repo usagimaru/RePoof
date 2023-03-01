@@ -1,5 +1,5 @@
 //
-//  DockTile.swift
+//  DockPref.swift
 //  RePoof
 //
 //  Created by usagimaru on 2023/03/02.
@@ -9,13 +9,15 @@ import Cocoa
 
 typealias PlistDictType = Dictionary<String, Any>
 
-struct DockTiles {
+struct DockPref {
 	
 	private static let dockPreferences = "~/Library/Preferences/com.apple.dock.plist"
 	
 	var persistentApps = [DockTile]()
 	var recentApps = [DockTile]()
 	var persistentOthers = [DockTile]()
+	var tileSize: Int?
+	var largeSize: Int?
 	
 	private func dockTiles(from dockPrefDictionary: PlistDictType, key: String) -> [DockTile] {
 		let dicts = dockPrefDictionary[key] as? [PlistDictType] ?? []
@@ -26,15 +28,18 @@ struct DockTiles {
 		}.compactMap { $0 }
 	}
 	
-	static func loadDockPref() -> DockTiles? {
+	static func load() -> DockPref? {
 		let plistPath = Self.dockPreferences.expandingTildeInPath()
 		if let plist = NSDictionary(contentsOfFile: plistPath) as? PlistDictType {
-			return DockTiles(with: plist)
+			return DockPref(with: plist)
 		}
 		return nil
 	}
 	
 	init?(with dockPrefDictionary: PlistDictType) {
+		self.tileSize = dockPrefDictionary["tilesize"] as? Int
+		self.largeSize = dockPrefDictionary["largesize"] as? Int
+		
 //		print("--- Apps ---")
 		self.persistentApps = dockTiles(from: dockPrefDictionary, key: "persistent-apps")
 //		print("--- Recents ---")

@@ -14,19 +14,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
+		// "LSUIElement = 1" と同じ効果
+		//NSApplication.shared.setActivationPolicy(.accessory)
+		
 		checkAccessibilityAccess()
+		self.dockInjection.tileRemoveTrigger = { location, tileSize in
+			// TODO: タイルのウインドウが取れるならそのframeを使った方が正確
+			NSAnimationEffect.poof.show(centeredAt: location, size: NSSize(width: tileSize, height: tileSize))
+		}
 	}
-
-	func applicationWillTerminate(_ aNotification: Notification) {
-		// Insert code here to tear down your application
-	}
-
-	func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
-		return true
-	}
-	
-	
-	// MARK: -
 	
 	private func checkAccessibilityAccess() {
 		// Sandboxが有効だとシステムアラートが表示されない
@@ -35,7 +31,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			self.dockInjection.start()
 		}
 	}
-
 
 }
 

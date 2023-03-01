@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "eventtapper",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/usagimaru/EventTapper",
+      "state" : {
+        "branch" : "main",
+        "revision" : "fb78a1bb95730d429963e024e5bf495425e4110c"
+      }
+    }
+  ],
+  "version" : 2
+}
