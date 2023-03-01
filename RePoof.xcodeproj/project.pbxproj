@@ -79,6 +79,7 @@
 				51AC068729AFB84E00F1D838 /* Sources */,
 				51AC068829AFB84E00F1D838 /* Frameworks */,
 				51AC068929AFB84E00F1D838 /* Resources */,
+				51AC06AA29B01C3C00F1D838 /* Reset accessibility_access (debug) */,
 			);
 			buildRules = (
 			);
@@ -139,6 +140,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51AC06AA29B01C3C00F1D838 /* Reset accessibility_access (debug) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Reset accessibility_access (debug)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "tccutil reset Accessibility $PRODUCT_BUNDLE_IDENTIFIER\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		51AC068729AFB84E00F1D838 /* Sources */ = {

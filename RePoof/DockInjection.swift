@@ -84,11 +84,11 @@ class DockInjection: EventTapperDelegate {
 				return false
 			}
 			
-			//print("Dock: \(processID)")
+			print("Dock: \(processID)")
 			
 			switch event.type {
 				case .leftMouseDown:
-					//print("Dock: \(processID) mouse down")
+					print("Dock: \(processID) mouse down")
 					resetMouseFlags()
 					self.mouseDownedLocation = event.unflippedLocation
 					self.mouseDowned = true
@@ -101,7 +101,7 @@ class DockInjection: EventTapperDelegate {
 					//print("Dock: \(processID) mouse dragged")
 					
 				case .leftMouseUp:
-					//print("Dock: \(processID) mouse up")
+					print("Dock: \(processID) mouse up")
 					if !self.mouseDragged {
 						resetMouseFlags()
 						return false
@@ -123,7 +123,7 @@ class DockInjection: EventTapperDelegate {
 						// `thresholdPoint = (largeSize * 2) + 38`
 						let threshold = CGFloat(largeSize * 2 + 38)
 						if threshold < location.y {
-							//print("ok: \(location.y) >= \(threshold)")
+							print("ok: \(location.y) >= \(threshold)")
 							self.tileRemoveTrigger?(location, largeSize)
 						}
 					}
@@ -135,7 +135,7 @@ class DockInjection: EventTapperDelegate {
 					if keyCode == KeyCode.escape {
 						resetMouseFlags()
 					}
-					//print("Dock: \(processID) KeyCode: \(keyCode)")
+					print("Dock: \(processID) KeyCode: \(keyCode)")
 					
 				case _: ()
 			}
