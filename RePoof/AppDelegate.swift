@@ -9,12 +9,12 @@ import Cocoa
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
-
 	
+	private var dockInjection = DockInjection()
 
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
-		// Insert code here to initialize your application
+		checkAccessibilityAccess()
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {
@@ -23,6 +23,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 	func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
 		return true
+	}
+	
+	
+	// MARK: -
+	
+	private func checkAccessibilityAccess() {
+		// Sandboxが有効だとシステムアラートが表示されない
+		AccessibilityAuthorization.askAccessibilityAccessIfNeeded()
+		AccessibilityAuthorization.pollAccessibilityAccessTrusted { [self] in
+			self.dockInjection.start()
+		}
 	}
 
 
