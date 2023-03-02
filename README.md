@@ -37,3 +37,14 @@ The formula is simple.
 - Processing when a user aborts a drag with the Escape key
 - Branch processing when a user drags a tile that cannot be removed
 - Coverage of tile types that can be registered in the Dock
+
+
+## Is there a more accurate way to detect Dock tile drags than mouse event monitoring?
+
+Mouse event monitoring is inaccurate for detecting tile dragging. To catch it accurately, we need to know that we are dragging a tile reliably.
+
+I thought I could get that information from the NSPasteboard for dragging, but that failed shortly after. According to Yoink's development blog, the NSPasteboard for dragging in the Dock is built with a unique name (as private), so it cannot be viewed by outside processes.
+
+I have tried it, but could not get any useful information from it.
+
+[Yoink: the Dock’s Stacks and iTunes files [UPDATE]](https://blog.eternalstorms.at/2011/11/29/yoink-the-docks-stacks-and-itunes-files/)
