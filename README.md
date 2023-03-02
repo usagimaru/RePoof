@@ -27,6 +27,8 @@ The formula is simple.
 
 `38` is the magic number that I calculated visually. I did not measure it precisely, so this value may be inaccurate.
 
+<img src="./formula.jpg" width=500>
+
 
 ## Cases not fully taken into consideration
 
