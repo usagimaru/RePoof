@@ -76,7 +76,7 @@ class DockInjection: EventTapperDelegate {
 		self.eventTapper.tap(for: eventTypes,
 							 location: .cgAnnotatedSessionEventTap,
 							 placement: .headInsertEventTap,
-							 tapOption: .listenOnly) { [self] event, function in
+							 tapOptions: .listenOnly) { [self] event, function in
 			let processID = Int32(event.getIntegerValueField(.eventTargetUnixProcessID))
 			
 			// Dockのプロセスを判定できない条件がある？

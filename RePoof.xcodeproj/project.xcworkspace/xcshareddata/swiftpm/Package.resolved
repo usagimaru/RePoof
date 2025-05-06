@@ -1,4 +1,5 @@
 {
+  "originHash" : "8648e89ff678bc94016e699f83082893c59196070f128e2e720cf954790530e9",
   "pins" : [
     {
       "identity" : "eventtapper",
@@ -6,9 +7,9 @@
       "location" : "https://github.com/usagimaru/EventTapper",
       "state" : {
         "branch" : "main",
-        "revision" : "fb78a1bb95730d429963e024e5bf495425e4110c"
+        "revision" : "50b004da37d2497ab6fdc3b017b2a2ca5f109246"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

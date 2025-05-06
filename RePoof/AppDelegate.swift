@@ -19,8 +19,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		
 		checkAccessibilityAccess()
 		self.dockInjection.tileRemoveTrigger = { location, tileSize in
-			// TODO: タイルのウインドウが取れるならそのframeを使った方が正確
-			NSAnimationEffect.poof.show(centeredAt: location, size: NSSize(width: tileSize, height: tileSize))
+			NSCursor.disappearingItem.set()
+			// NSAnimationEffect is deprecated from macOS 14.0
+			//NSAnimationEffect.poof.show(centeredAt: location, size: NSSize(width: tileSize, height: tileSize))
 		}
 	}
 	
