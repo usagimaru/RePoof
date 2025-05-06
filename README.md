@@ -5,6 +5,9 @@ An injection that displays the lost Poof effect of the Dock (experiment).
 
 ## The Poof API
 
+> [!WARNING]
+> Update: The NSAnimationEffect API has been deprecated since macOS 14. Therefore, my experiment will no longer work on the new macOS.
+
 `NSAnimationEffect.poof` is used to display Poof. This is a perfectly legal API.
 
 [https://developer.apple.com/documentation/appkit/nsanimationeffect](https://developer.apple.com/documentation/appkit/nsanimationeffect)
